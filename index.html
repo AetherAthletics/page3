@@ -1,34 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rove & Thread — Vintage Clothing Brand</title>
-  <meta name="description" content="Simple two-page student project: Home + Collections for a clothing brand.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
   <header>
-    <h1>Rove & Thread</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
+    <div class="container brand">
+      <div class="logo">R</div>
+      <div>
+        <div style="font-weight:800">Rove & Thread</div>
+        <div style="font-size:12px;color:var(--muted)">vintage — web proj</div>
+      </div>
+    </div>
+
+    <nav class="container">
+      <a href="#">Home</a>
+      <a href="#">Collections</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Timeless Vintage Style</h2>
-      <p>Curated vintage pieces inspired by past decades.</p>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Casual pieces. Clean lines. Everyday wear.</h1>
+        <p>Rove & Thread is a clothing brand focusing on simple but noticeable fits. Browse our starter collection below.</p>
+        <a class="cta" href="#">See Collections</a>
+      </div>
+
+      <div style="width:260px">
+        <div class="card" style="padding:0;overflow:hidden">
+          <img src="item1.jpg" alt="Sample garment" />
+        </div>
+      </div>
     </section>
+
+    <h2 style="margin-top:40px">Featured</h2>
+
+    <div class="grid">
+      <div class="card">
+        <img src="item1.jpg" alt="Boxy Cropped Tee" />
+        <h3>Boxy Cropped Tee</h3>
+        <div class="price">₱499</div>
+      </div>
+
+      <div class="card">
+        <img src="item2.jpg" alt="Navy Blue Yankees Hoodie" />
+        <h3>Navy Blue Yankees Hoodie</h3>
+        <div class="price">₱999</div>
+      </div>
+
+      <div class="card">
+        <img src="item3.jpg" alt="Brown Leather Jacket" />
+        <h3>Brown Leather Jacket</h3>
+        <div class="price">₱1,599</div>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Rove & Thread</p>
+    © Rove & Thread — Vintage Clothing Brand
   </footer>
-
 </body>
 </html>
+
 
