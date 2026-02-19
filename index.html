@@ -18,14 +18,12 @@
   <title>Rove & Thread — vintage clothing brand</title>
   <meta name="description" content="Simple two-page student project: Home + Collections for a clothing brand.">
   <style>
-    /* --------------------
-       Simple, clean CSS made to look like a student project
-       -------------------- */
+   
     :root{
-      --bg:#0f1720; /* dark background */
+      --bg:#0f1720;
       --card:#111827;
       --muted:#9ca3af;
-      --accent:#7dd3fc; /* light blue */
+      --accent:#7dd3fc;
       --white:#f8fafc;
       font-family: Inter, system-ui, Arial, sans-serif;
     }
@@ -40,44 +38,44 @@
     main{padding:28px}
     .container{max-width:980px;margin:0 auto}
 
-    /* Hero */
+    
     .hero{display:flex;gap:28px;align-items:center}
     .hero-left{flex:1}
     .hero h1{font-size:28px;margin:0 0 8px}
     .hero p{color:var(--muted);margin:0 0 16px}
     .cta{display:inline-block;background:var(--accent);color:#042029;padding:10px 14px;border-radius:8px;font-weight:700}
 
-    /* Simple product grid */
+    
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:22px}
     .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
     .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
     .card h3{margin:10px 0 6px;font-size:16px}
     .price{color:var(--accent);font-weight:700}
 
-    /* Footer */
+   
     footer{padding:18px 24px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);text-align:center}
 
-    /* Page 2 styles */
+   
     .page-title{font-size:20px;margin:8px 0 12px}
     .back-btn{display:inline-block;margin-bottom:12px}
 
-    /* Contact form */
+   
     .form-row{display:flex;gap:10px}
     input,textarea,button{font-family:inherit}
     input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#0b1220;color:var(--white)}
     button{padding:10px 14px;border-radius:8px;border:none;background:var(--accent);color:#042029;font-weight:700}
 
-    /* small mobile tweaks */
+   
     @media(min-width:880px){
       .hero h1{font-size:36px}
     }
 
-    /* small visual "student" touches */
+    
     .note{color:var(--muted);font-size:13px;margin-top:10px}
   </style>
 </head>
 <body>
-  <!-- Simple single-file site with two "pages" controlled by the hash (#home, #collections) -->
+  
   <header>
     <div class="brand container">
       <div class="logo">R</div>
@@ -96,7 +94,7 @@
   <main>
     <div class="container">
 
-      <!-- HOME PAGE -->
+      
       <section id="home" data-page>
         <div class="hero">
           <div class="hero-left">
@@ -115,7 +113,7 @@
         <h2 style="margin-top:28px">Featured</h2>
         <div class="grid">
           <article class="card">
-            <img src="C:\Users\Shia\Downloads\Essential Cropped Tee - 2XL.jpg" alt="item-1">
+            <img src="https://wholesaleluxuryblanks.com/products/preorder-mens-cropped-boxy-luxury-tee-vintage" alt="item-1">
             <h3>boxy cropped tee</h3>
             <div class="price">₱499</div>
             <p style="color:var(--muted);font-size:13px;margin-top:8px">Soft cotton tee — boxy fit. affordable price.</p>
@@ -138,14 +136,14 @@
         </div>
       </section>
 
-      <!-- PAGE 2: Collections (must be linked to Home) -->
+      
       <section id="collections" data-page style="display:none;margin-top:6px">
         <a class="back-btn" href="#home" onclick="navigate('#home')">← Back to Home</a>
         <h2 class="page-title">Collections</h2>
         <p style="color:var(--muted)">A short catalogue of the brand's items. Click an item to see details.</p>
 
         <div class="grid" style="margin-top:14px">
-          <!-- Item with simple JS detail demo -->
+          
           <div class="card" onclick="openDetails('boxy cropped shirt','A reliable tee for daily use. 100% cotton, machine washable. ₱499')" style="cursor:pointer">
             <img src="C:\Users\Shia\Downloads\Essential Cropped Tee - 2XL.jpg" alt="tee">
             <h3>boxy cropped shirt</h3>
@@ -176,7 +174,7 @@
 
       </section>
 
-      <!-- CONTACT PAGE (simple form) -->
+      
       <section id="contact" data-page style="display:none;margin-top:6px">
         <a class="back-btn" href="#home" onclick="navigate('#home')">← Back to Home</a>
         <h2 class="page-title">Contact / Inquiry</h2>
@@ -209,12 +207,10 @@
   </footer>
 
   <script>
-    // Basic single-file navigation and small interactive features.
-    // This helps satisfy "Page 2 linked to Home" requirement by using hash links.
+    
 
     function navigate(hash){
-      // simple router: show the section matching the hash, hide others
-      location.hash = hash;
+     
       showPageFromHash();
     }
 
@@ -227,12 +223,12 @@
       else document.querySelector('#home').style.display = '';
     }
 
-    // Small demo modal for product details
+   
     function openDetails(title,text){
       document.getElementById('detailTitle').textContent = title;
       document.getElementById('detailText').textContent = text;
       document.getElementById('detailModal').style.display = '';
-      // scroll to modal on small screens
+     
       document.getElementById('detailModal').scrollIntoView({behavior:'smooth'});
     }
     function closeDetails(){
@@ -243,7 +239,7 @@
       alert('Added to cart (demo). This project does not include a real shopping cart.');
     }
 
-    // Contact form handler (local demo only)
+    
     function handleForm(e){
       e.preventDefault();
       var name = document.getElementById('name').value.trim();
@@ -253,12 +249,12 @@
         document.getElementById('formResult').textContent = 'Please fill all fields.';
         return;
       }
-      // fake sending
+      
       document.getElementById('formResult').textContent = 'Thanks ' + name.split(' ')[0] + '! (demo only)';
       document.getElementById('contactForm').reset();
     }
 
-    // initialize
+    
     window.addEventListener('load', showPageFromHash);
     window.addEventListener('hashchange', showPageFromHash);
   </script>
